@@ -82,4 +82,12 @@ const CardItem = ({ itemName }) => {
 export default CardItem
 ```
 </details>
+
+<details>
+<summary>배포한 페이지에서 상품 리스트가 로드되지 않음</summary>
+
+github에는 환경 파일이 업로드 되지 않으므로 vercel에서 환경 변수를 입력해 주어야하는데 이걸 깜빡한 채 배포했었다.
+
+개발 도구에서 네트워크 탭을 확인한 후 API URL이 undefined 인걸 발견하고 안도의 한숨을 쉬며 수정했다.
+</details>
 </details>
