@@ -1,13 +1,16 @@
 import React from 'react'
 import { MENUS } from '../../../constants/category'
-import { Link } from 'react-router-dom'
+import LinkItem from '../../../components/atom/LinkItem'
 
-const CategoriesLink = ({ goTo, labelName }) => {
+const CategoriesLink = ({ To, labelName }) => {
 
   return (
-    <Link className="btn btn-ghost btn-sm rounded-btn text-gray-700 dark:text-white" to={goTo}>
+    <LinkItem
+      classNames="btn btn-ghost btn-sm rounded-btn text-gray-700 dark:text-white"
+      To={To}
+    >
       {labelName}
-    </Link>
+    </LinkItem>
   )
 }
 
@@ -15,9 +18,9 @@ const HederNavMenu = () => {
 
   return (
     <div className="flex-none hidden md:flex md:flex-1 ml-2">
-      <CategoriesLink goTo="/fashion" labelName={MENUS.FASHION} />
-      <CategoriesLink goTo="/accessory" labelName={MENUS.ACCESSORY} />
-      <CategoriesLink goTo="/digital" labelName={MENUS.DIGITAL} />
+      <CategoriesLink To="/fashion" labelName={MENUS.FASHION} />
+      <CategoriesLink To="/accessory" labelName={MENUS.ACCESSORY} />
+      <CategoriesLink To="/digital" labelName={MENUS.DIGITAL} />
     </div>
   )
 }

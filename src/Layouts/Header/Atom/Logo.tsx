@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import LinkItem from '../../../components/atom/LinkItem'
 
 const Logo = () => {
   return (
     <h1 className="shrink-0 flex md:flex-none flex-1 mx-1 sm:mx-2">
-      <Link className="text-lg text-gray-700 dark:text-white font-bold whitespace-nowrap" to="/">
+      <LinkItem classNames="text-lg text-gray-700 dark:text-white font-bold whitespace-nowrap" To="/">
         React Shop
-      </Link>
+      </LinkItem>
     </h1>
   )
 }
