@@ -1,6 +1,4 @@
-import React from 'react'
-
-const SwapThem = () => {
+const SwapTheme = () => {
   return (
     <label className="swap swap-rotate mr-2 sm:mr-4">
       <input type="checkbox" className="js-theme" checked={true} control-id="ControlID-1" />
@@ -16,4 +14,4 @@ const SwapThem = () => {
   )
 }
 
-export default SwapThem
+export default SwapTheme

@@ -1,4 +1,3 @@
-import React from 'react'
 import { MENUS } from '../../../constants/category'
 import LinkItem from '../../../components/atom/LinkItem'
 

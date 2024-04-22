@@ -1,5 +1,3 @@
-import React from 'react'
-
 const CartIcon = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 stroke-gray-700 dark:stroke-white" fill="none" viewBox="0 0 24 24">

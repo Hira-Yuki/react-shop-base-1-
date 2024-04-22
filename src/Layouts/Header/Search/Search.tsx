@@ -1,4 +1,3 @@
-import React from 'react'
 import SearchButton from '../Atom/SearchButton'
 
 const Search = () => {

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const SearchButton = () => {
   return (
     <button type="button" className="flex sm:hidden w-10 sm:w-auto mx-0 px-0 sm:mx-2 sm:px-2 btn btn-ghost js-search" control-id="ControlID-2">

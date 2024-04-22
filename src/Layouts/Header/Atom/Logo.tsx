@@ -1,4 +1,3 @@
-import React from 'react'
 import LinkItem from '../../../components/atom/LinkItem'
 
 const Logo = () => {

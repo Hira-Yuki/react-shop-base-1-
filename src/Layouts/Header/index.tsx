@@ -1,9 +1,8 @@
-import React from 'react'
 import HederNavMenu from './Atom/HederNavMenu'
 import Logo from './Atom/Logo'
 import HamburgerIcon from './Atom/HamburgerIcon'
-import SwapThem from './Them/SwapThem'
-import CartButton from './CartButton/CartButton'
+import SwapTheme from './Theme/SwapTheme'
+import CartButton from './CartButton'
 import Search from './Search/Search'
 
 const Header = () => {
@@ -15,7 +14,7 @@ const Header = () => {
         <Logo />
         <HederNavMenu />
         <div className="flex items-center px-2">
-          <SwapThem />
+          <SwapTheme />
           <Search />
           <CartButton />
         </div>

@@ -14,10 +14,15 @@ const THEME = {
   LIGHT: "light",
 };
 
+const CARDS = [
+  "visa", "master", "americanExpress", "paypal", "dinersClub", "discover"
+]
+
 const CONSTANTS = {
   IS_DEV,
   KEY,
   THEME,
+  CARDS,
 };
 
 export default CONSTANTS;
