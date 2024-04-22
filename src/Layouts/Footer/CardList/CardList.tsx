@@ -1,13 +1,14 @@
 import CardItem from './CardItem'
 import CONSTANTS from '../../../constants/constants'
 
+
 const cardsList = CONSTANTS.CARDS
 
 const CardList = () => {
 
   return (
     <ul className="flex">
-      {cardsList.map((card, index) =>
+      {cardsList.map((card) =>
         <CardItem key={card} itemName={card} />
       )}
     </ul>
