@@ -1,3 +1,4 @@
+import { toCurrencyFormat } from '../../helpers/helpers'
 import LinkItem from '../atom/LinkItem'
 
 const ProductsItem = ({ title, category, description, id, image, price, rating }) => {
@@ -16,7 +17,7 @@ const ProductsItem = ({ title, category, description, id, image, price, rating }
       </figure>
       <div className="card-body bg-gray-100 dark:bg-gray-700">
         <p className="card-title text-base">{title}</p>
-        <p className="text-base">{price}</p>
+        <p className="text-base">{toCurrencyFormat(price)}</p>
       </div>
     </LinkItem>
   )
