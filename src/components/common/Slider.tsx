@@ -1,9 +1,9 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { Link } from "react-router-dom";
 import fashionImg from "../../assets/img/carousel/img_shop_fashion.jpeg";
 import digitalImg from "../../assets/img/carousel/img_shop_digital.jpeg";
 import groceryImg from "../../assets/img/carousel/img_shop_grocery.jpeg";
+import LinkItem from "../atom/LinkItem";
 
 /**
  * Slider를 라이브러리를 활용하셔도 되지만 시간이 남는다면 직접하셔서 구현 해보세요.
@@ -52,7 +52,7 @@ const Slider = () => {
             <div className="carousel-description absolute left-auto right-auto bottom-1/3 mb-10 text-left w-full lg:container px-4 md:px-10">
               <h2 className="text-2xl lg:text-4xl font-bold text-white">{item.title}</h2>
               <p className="my-2 text-white">{item.text}</p>
-              <Link to={`/${item.name}`} className="btn btn-sm lg:btn-md mt-3">
+              <LinkItem To={`/${item.name}`} classNames="btn btn-sm lg:btn-md mt-3">
                 바로가기
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ const Slider = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </Link>
+              </LinkItem>
             </div>
             <img src={item.img} alt={item.name} />
           </div>

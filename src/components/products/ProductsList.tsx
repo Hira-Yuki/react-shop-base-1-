@@ -5,10 +5,10 @@ import ProductsLoad from "./ProductsLoad"
 
 const ProductsList = ({ limit, filter }) => {
   const productList = useRecoilValueLoadable(productsList)
-  const isFashion = (list: any[]) => list.filter((item: { category: string }) =>
+  const isFashion = (list: IProduct[]) => list.filter((item: { category: string }) =>
     item.category === "men's clothing" || item.category === "women's clothing")
-  const isJewelery = (list: any[]) => list.filter((item: { category: string }) => item.category === 'jewelery')
-  const isElectronics = (list: any[]) => list.filter((item: { category: string }) => item.category === 'electronics')
+  const isJewelery = (list: IProduct[]) => list.filter((item: { category: string }) => item.category === 'jewelery')
+  const isElectronics = (list: IProduct[]) => list.filter((item: { category: string }) => item.category === 'electronics')
   const dynamicCategory = (list: IProduct[]) => filter === "fashion" ? isFashion(list) : filter === "jewelery" ? isJewelery(list) : isElectronics(list)
 
   switch (productList.state) {
