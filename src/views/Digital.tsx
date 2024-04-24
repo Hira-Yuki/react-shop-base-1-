@@ -1,4 +1,5 @@
 import BreadCrumb from "../components/common/Breadcrumb";
+import DigitalList from "../components/products/CategoryProduct/DigitalList";
 import { MENUS } from "../constants/category";
 /**
  * 뷰페이지에는 특별한 로직이 포함되어서는 안됩니다.
@@ -13,6 +14,7 @@ const Digital = (): JSX.Element => {
       <BreadCrumb category={MENUS.HOME} crumb={MENUS.DIGITAL} />
       <article className="pt-2 lg:pt-4 pb-4 lg:pb-8 px-4 xl:px-2 mb-20 xl:container mx-auto">
         {/* componetns products 폴더에 공통으로 사용할 ItemList 컴포넌트를 만들어서 노출 시켜 보세요. */}
+        <DigitalList />
       </article>
     </section>
   );
