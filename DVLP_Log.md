@@ -1,5 +1,8 @@
 # 개발 진행 기록 
 
+## Vercel 이용한 배포 
+- https://react-shop-psi-plum.vercel.app/
+
 ### 요구 사항
 샘플페이지 참고하여 구현하기 https://react-shop-oinochoe.vercel.app/
 클론 코딩을 할 수도 있지만 내용 참고하여 개인 프로젝트를 구현해도 OK.
@@ -91,3 +94,12 @@ github에는 환경 파일이 업로드 되지 않으므로 vercel에서 환경 
 개발 도구에서 네트워크 탭을 확인한 후 API URL이 undefined 인걸 발견하고 안도의 한숨을 쉬며 수정했다.
 </details>
 </details>
+
+## Day 2
+
+카테고리별 리스트 뷰 구현, 상품 디테일 페이지 뷰 구현, 디테일 페이지 로드 중일 때 스켈레톤 UI 표시
+Todo: 스켈레톤 UI 고도화, 동적 상태 이용해서 스켈레톤 UI와 디테일 뷰 스왑
+
+- Cart 페이지 작업 시작 
+
+-----
