@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { MENUS } from "../../constants/category";
 import LinkItem from "../atom/LinkItem";
 
