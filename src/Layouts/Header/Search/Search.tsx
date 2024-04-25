@@ -2,10 +2,12 @@ import { useRecoilValueLoadable } from 'recoil'
 import SearchButton from '../Atom/SearchButton'
 import { productsList } from '../../../store/products'
 import { useState } from 'react'
+import { useNavigate } from 'react-router'
 
 const Search = () => {
   const productList = useRecoilValueLoadable(productsList)
   const [inputValue, setInputValue] = useState("")
+  const navigate = useNavigate()
 
   const handleInput = (e) => {
     setInputValue(e.target.value)
@@ -15,6 +17,10 @@ const Search = () => {
     productList.contents.filter((product) =>
       product.title.toLowerCase().includes(inputValue.toLowerCase())
     ) : [];
+
+  const redirectProduct = (id) => {
+    navigate(`/product/${id}`)
+  }
 
   return (
     <div className="dropdown">
@@ -32,7 +38,7 @@ const Search = () => {
         {/* 검색된 항목이 나열될 곳 */}
         {filteredProducts.map((product) => (
           <li key={product.id}>
-            <button type="button" className="text-left js-searchedItem">
+            <button type="button" className="text-left js-searchedItem" onClick={() => redirectProduct(product.id)}>
               <span className="text-gray-600 dark:text-white line-clamp-2">
                 {product.title}
               </span>

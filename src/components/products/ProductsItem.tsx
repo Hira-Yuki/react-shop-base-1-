@@ -1,7 +1,7 @@
 import { toCurrencyFormat } from '../../helpers/helpers'
 import LinkItem from '../atom/LinkItem'
 
-const ProductsItem = ({ title, category, description, id, image, price, rating }) => {
+const ProductsItem = ({ title, id, image, price }) => {
 
   return (
     <LinkItem
