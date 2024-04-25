@@ -37,7 +37,6 @@ const ProductsDetail = () => {
   const fetchItem = async () => {
     try {
       const { data } = await GetApi.getProductsItem(id)
-      console.log(data, "fetching products")
       setProductItem(data)
       setIsLoading(false)
 
