@@ -48,7 +48,7 @@ const ProductsDetail = () => {
 
   useEffect(() => {
     fetchItem()
-  }, [])
+  }, [id])
 
   useEffect(() => {
     const newCategory =
