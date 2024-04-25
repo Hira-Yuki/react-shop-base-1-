@@ -2,20 +2,27 @@ import BreadCrumb from "../common/Breadcrumb";
 import Confirm from "../common/Confirm";
 import LinkItem from "../atom/LinkItem";
 import CartList from "./CartList";
+import { useRecoilState } from "recoil";
+import { ICartState, cartState, getTotalItemCount } from "../../store/cart";
 
 const CartView = (): JSX.Element => {
+  const [cart, setCart] = useRecoilState<ICartState>(cartState);
+  const totalCount = getTotalItemCount(cart)
   return (
     <>
       <BreadCrumb category="홈" crumb="장바구니" />
       <div className="mt-6 md:mt-14 px-2 lg:px-0">
+        {totalCount > 0 ? (<CartList />) : (
+          <div>
+            <h1 className="text-2xl">장바구니에 물품이 없습니다.</h1>
+            <LinkItem To="/" classNames="btn btn-primary mt-10">
+              담으러 가기
+            </LinkItem>
+          </div>
+        )}
+
         {/* 물품이 없다면? */}
-        <CartList />
-        <div>
-          <h1 className="text-2xl">장바구니에 물품이 없습니다.</h1>
-          <LinkItem To="/" classNames="btn btn-primary mt-10">
-            담으러 가기
-          </LinkItem>
-        </div>
+
         {/* 구매하기 버튼 등 화면을 구성 해보세요. */}
       </div>
       <Confirm />

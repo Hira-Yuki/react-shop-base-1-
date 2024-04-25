@@ -70,3 +70,9 @@ export const removeFromCart = (cart: ICartState, id: string) => {
 /**
  * 그 외에 화면을 참고하며 필요한 기능들을 구현 하세요.
  */
+
+export const getTotalItemCount = (cart: ICartState): number => {
+  const items = cart.items ?? {};
+
+  return Object.values(items).reduce((total, item) => total + item.count, 0);
+};
