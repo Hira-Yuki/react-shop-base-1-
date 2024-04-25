@@ -16,12 +16,9 @@ const JeweleryList = () => {
               <ProductsItem
                 key={item.id}
                 id={item.id}
-                category={item.category}
                 title={item.title}
-                description={item.description}
                 image={item.image}
                 price={item.price}
-                rating={item.rating}
               />
             )
           })}
