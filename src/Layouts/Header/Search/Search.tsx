@@ -20,6 +20,7 @@ const Search = () => {
 
   const redirectProduct = (id) => {
     navigate(`/product/${id}`)
+    setInputValue("")
   }
 
   return (
