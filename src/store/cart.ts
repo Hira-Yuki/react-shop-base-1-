@@ -40,6 +40,21 @@ export const cartState = atom<ICartState>({
  */
 
 // addToCart는 구현 해보세요.
+export const addCartItem = (cart: ICartState, id: number, count: any) => {
+  const newItem: ICartInfo = { id, count };
+  const existingItem = cart.items ? cart.items[id] : undefined;
+  const updatedCart = {
+    ...cart,
+    items: {
+      ...cart.items,
+      [id]: existingItem
+        ? { ...existingItem, count: existingItem.count + count }
+        : newItem,
+    },
+  };
+
+  return updatedCart
+}
 
 // removeFromCart는 참고 하세요.
 export const removeFromCart = (cart: ICartState, id: string) => {

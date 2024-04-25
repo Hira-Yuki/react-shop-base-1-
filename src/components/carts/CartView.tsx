@@ -1,6 +1,7 @@
 import BreadCrumb from "../common/Breadcrumb";
 import Confirm from "../common/Confirm";
 import LinkItem from "../atom/LinkItem";
+import CartList from "./CartList";
 
 const CartView = (): JSX.Element => {
   return (
@@ -8,6 +9,7 @@ const CartView = (): JSX.Element => {
       <BreadCrumb category="홈" crumb="장바구니" />
       <div className="mt-6 md:mt-14 px-2 lg:px-0">
         {/* 물품이 없다면? */}
+        <CartList />
         <div>
           <h1 className="text-2xl">장바구니에 물품이 없습니다.</h1>
           <LinkItem To="/" classNames="btn btn-primary mt-10">

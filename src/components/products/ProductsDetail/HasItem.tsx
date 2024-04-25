@@ -1,9 +1,18 @@
-import React from 'react'
+import { useRecoilState } from 'recoil'
 import { toCurrencyFormat } from '../../../helpers/helpers'
 import LinkItem from '../../atom/LinkItem'
 import Rating from '../../common/Rating'
+import { ICartInfo, ICartState, addCartItem, cartState } from '../../../store/cart'
 
 const HasItem = ({ productItem }) => {
+  const [cartItems, setCartItems] = useRecoilState(cartState)
+
+  const updateCart = (cart: ICartState, id: number, count: any) => {
+    const newCartItem = addCartItem(cart, id, count)
+
+    setCartItems(newCartItem)
+  }
+
   return (
     <div className="lg:flex lg:items-center mt-6 md:mt-14 px-2 lg:px-0">
       <figure className="flex-shrink-0 rounded-2xl overflow-hidden px-4 py-4 bg-white view_image">
@@ -23,7 +32,7 @@ const HasItem = ({ productItem }) => {
         <Rating rate={productItem.rating.rate} count={productItem.rating.count} />
         <p className="mt-2 mb-4 text-3xl">{toCurrencyFormat(productItem.price)}</p>
         <div className="card-actions">
-          <button className="btn btn-primary">장바구니에 담기</button>
+          <button className="btn btn-primary" onClick={() => updateCart(cartItems, productItem.id, 1)}>장바구니에 담기</button>
           <LinkItem classNames="btn btn-outline ml-1" To="/cart">장바구니로 이동</LinkItem>
         </div>
       </div>

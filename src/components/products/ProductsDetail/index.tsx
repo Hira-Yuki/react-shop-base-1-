@@ -5,7 +5,7 @@ import BreadCrumb from '../../common/Breadcrumb';
 import IsLoading from './IsLoading';
 import HasItem from './HasItem';
 
-interface ProductItemType {
+export interface ProductItemType {
   category: string,
   description: string,
   id: number,
