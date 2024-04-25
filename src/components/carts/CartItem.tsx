@@ -4,6 +4,8 @@ import { toCurrencyFormat } from "../../helpers/helpers"
 import LinkItem from "../atom/LinkItem"
 import IsLoading from "../products/ProductsDetail/IsLoading"
 import { ProductItemType } from "../products/ProductsDetail"
+import { useRecoilState } from "recoil"
+import { ICartState, cartState } from "../../store/cart"
 
 const CartItem = ({ id, count }) => {
   const [productItem, setProductItem] = useState<ProductItemType>({
@@ -18,6 +20,7 @@ const CartItem = ({ id, count }) => {
       rate: 0,
     },
   })
+  const [cart, setCart] = useRecoilState<ICartState>(cartState);
   const [isLoading, setIsLoading] = useState(true)
 
   const fetchItem = async () => {
@@ -35,11 +38,39 @@ const CartItem = ({ id, count }) => {
     fetchItem()
   }, [])
 
+  const increaseCount = () => {
+    const newCount = count + 1;
+    setCart(cart => ({
+      ...cart,
+      items: {
+        ...cart.items,
+        [id]: { id, count: newCount }
+      }
+    }));
+  }
+
+  const decreaseCount = () => {
+    const newCount = count - 1;
+    if (newCount < 1) {
+      const newItems = { ...cart.items };
+      delete newItems[id];
+      setCart({ ...cart, items: newItems });
+    } else {
+      setCart(cart => ({
+        ...cart,
+        items: {
+          ...cart.items,
+          [id]: { id, count: newCount }
+        }
+      }));
+    }
+  }
+
   if (isLoading === true) return <IsLoading />
 
   return (
     <div className="lg:flex lg:items-center mt-4 px-2 lg:px-0">
-      <LinkItem To={`/product/${id}`} classNames={""}>
+      <LinkItem To={`/product/${id}`} classNames={null}>
         <figure className="w-56 min-w-full flex-shrink-0 rounded-2xl overflow-hidden px-4 py-4 bg-white">
           <img
             src={productItem.image}
@@ -62,13 +93,13 @@ const CartItem = ({ id, count }) => {
         </p>
         <div className="card-actions">
           <div className="btn-group">
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={decreaseCount}>
               -
             </button>
             <button className="btn btn-ghost no-animation">
               {count}
             </button>
-            <button className="btn btn-primary">
+            <button className="btn btn-primary" onClick={increaseCount}>
               +
             </button>
           </div>

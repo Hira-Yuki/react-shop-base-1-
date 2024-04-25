@@ -16,12 +16,10 @@ const CartList = (): JSX.Element => {
   const CartItems = Object.values(cart.items ?? {})
 
   return (
-    <div className="lg:flex justify-between mb-20">
+    <div className="lg:flex justify-between mb-20 flex-wrap">
       {/* 카트 리스트 화면을 구성 해보세요. */}
       {CartItems.map(item => (
-        <div key={item.id}>
-          <CartItem id={item.id} count={item.count} />
-        </div>
+        <CartItem key={item.id} id={item.id} count={item.count} />
       ))}
     </div>
   );
