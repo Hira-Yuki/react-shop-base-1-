@@ -1,7 +1,8 @@
 # 개발 진행 기록 
 
-## Vercel 이용한 배포 
+## 배포 주소 및 저장소
 - https://react-shop-psi-plum.vercel.app/
+- https://github.com/Hira-Yuki/react-shop-base-1-
 
 ### 요구 사항
 샘플페이지 참고하여 구현하기 https://react-shop-oinochoe.vercel.app/
