@@ -14,7 +14,7 @@ const HasItem = ({ productItem }) => {
   }
 
   return (
-    <div className="lg:flex lg:items-center mt-6 md:mt-14 px-2 lg:px-0">
+    <div className="lg:flex items-center mt-6 md:mt-14 px-2 lg:px-0">
       <figure className="flex-shrink-0 rounded-2xl overflow-hidden px-4 py-4 bg-white view_image">
         <img
           src={productItem.image}

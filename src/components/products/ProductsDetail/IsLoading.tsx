@@ -2,7 +2,7 @@ const IsLoading = () => {
   return (
     <div className="flex items-center space-x-4 p-4 animate-pulse flex-wrap">
       <div className="flex-1">
-        <div className="h-48 bg-gray-300 rounded-lg w-100"></div> {/* 이미지 스켈레톤 */}
+        <div className="h-72 bg-gray-300 rounded-lg w-100"></div> {/* 이미지 스켈레톤 */}
       </div>
       <div className="flex-2">
         <div className="space-y-3">
