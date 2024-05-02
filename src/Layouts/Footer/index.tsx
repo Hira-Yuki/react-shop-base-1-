@@ -6,7 +6,7 @@ import Copyright from './Copyright/Copyright'
 
 const Footer = () => {
   return (
-    <footer className="p-10 footer bg-base-200 text-base-content footer-center">
+    <footer className="mt-auto p-10 footer bg-base-200 text-base-content footer-center">
       <FooterTitle />
       <CardList />
       <Links />

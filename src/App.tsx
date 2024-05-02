@@ -10,10 +10,10 @@ const App = (): JSX.Element => {
   return (
     <BrowserRouter>
       <input type="checkbox" id="side-menu" className="drawer-toggle" />
-      <section className="drawer-content">
+      <section className="drawer-content flex flex-col min-h-screen">
         {/* Nav를 렌더링 하세요 */}
         <Header />
-        <section className="main pt-16">
+        <section className="main flex-grow pt-16">
           <Router />
         </section>
         {/* Footer를 렌더링 하세요 */}
