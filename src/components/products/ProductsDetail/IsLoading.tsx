@@ -1,6 +1,3 @@
-import Rating from '../../common/Rating'
-import LinkItem from '../../atom/LinkItem'
-
 const IsLoading = () => {
   return (
     <div className="flex items-center space-x-4 p-4 animate-pulse flex-wrap">
