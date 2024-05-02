@@ -19,7 +19,7 @@ const HasItem = ({ productItem }) => {
         <img
           src={productItem.image}
           alt={productItem.title}
-          className="object-contain w-full h-72"
+          className="object-contain h-72"
         />
       </figure>
       <div className="card-body px-1 lg:px-12">

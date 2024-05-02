@@ -13,7 +13,7 @@ const CartView = (): JSX.Element => {
   const [modalOpen, setModalOpen] = useState(false)
 
   return (
-    <>
+    <section className="pt-4 lg:pt-5 pb-4 lg:pb-8 px-4 xl:px-2 xl:container mx-auto">
       <BreadCrumb category="홈" crumb="장바구니" />
       <div className="mt-6 md:mt-14 px-2 lg:px-0">
         {totalCount > 0 ? (
@@ -25,7 +25,7 @@ const CartView = (): JSX.Element => {
         <TotalPrice />
       </div>
       <Confirm />
-    </>
+    </section>
   );
 };
 
